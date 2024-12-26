@@ -1,0 +1,97 @@
+[
+  {
+    "src": "/projects/AIEdu.png",
+    "alt": "AIEdu",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/MarbleSolitaire.png",
+    "alt": "MarbleSolitaire",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/actions.png",
+    "alt": "actions",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/ambulance.png",
+    "alt": "ambulance",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/arduino.png",
+    "alt": "arduino",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/ens.png",
+    "alt": "ens",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/faceID.png",
+    "alt": "faceID",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/faceID2.png",
+    "alt": "faceID2",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/imageProcessing.png",
+    "alt": "imageProcessing",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/nand2tetris.jpg",
+    "alt": "nand2tetris",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/neuBlockchain.png",
+    "alt": "neuBlockchain",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/neugym.png",
+    "alt": "neugym",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/norswap.png",
+    "alt": "norswap",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/pendulum.png",
+    "alt": "pendulum",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/personalWebsite-old.png",
+    "alt": "personalWebsite-old",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/resme.png",
+    "alt": "resme",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/starcrash.png",
+    "alt": "starcrash",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/verifund.png",
+    "alt": "verifund",
+    "description": "This is the description"
+  },
+  {
+    "src": "/projects/yt.png",
+    "alt": "yt",
+    "description": "This is the description"
+  }
+]
