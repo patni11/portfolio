@@ -323,7 +323,6 @@ Experience the future of Mac with Face ID. try the app today and unlock your Mac
       desc: "39 points in International Baccalaureate",
     },
   ],
-  everythingResume: "/resumes/Everything/Shubh_Patni_resume.pdf",
   timeline: [
     {
       date: "Sep 11, 2002",
@@ -362,6 +361,7 @@ Experience the future of Mac with Face ID. try the app today and unlock your Mac
       link: "",
     },
   ],
+  everythingResume: "/resumes/Everything/Shubh_Patni_resume.pdf",
   softwareDevResume: "/resumes/SoftwareEngineer/Shubh_Patni_resume.pdf",
   fullstackDevResume: "/resumes/FullStack/Shubh_Patni_resume.pdf",
   web3DevResume: "/resumes/Web3/Shubh_Patni_resume.pdf",
