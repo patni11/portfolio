@@ -5,7 +5,7 @@ export const articles = [
     pk: 600,
     fields: {
       title: "How to make decisions",
-      date_created: "2021-06-21",
+      date_created: "2025-05-10",
       medium_link:
         "https://blog.shubhpatni.com/how-to-make-decisions",
       image:
