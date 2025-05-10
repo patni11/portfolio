@@ -1,5 +1,18 @@
-export const tags = ["All", "Programming", "Productivity", "Crypto", "Tech"];
+export const tags = ["All", "Programming", "Productivity", "Crypto", "Tech", "Philosophy"];
 export const articles = [
+  {
+    model: "main.articles",
+    pk: 600,
+    fields: {
+      title: "How to make decisions",
+      date_created: "2021-06-21",
+      medium_link:
+        "https://blog.shubhpatni.com/how-to-make-decisions",
+      image:
+        "/article_images/Let’s Clear Up the Most Confusing Thing in CSS.png",
+      tags: "Philosophy",
+    },
+  },
   {
     model: "main.articles",
     pk: 550,
@@ -15,6 +28,109 @@ export const articles = [
   },
   {
     model: "main.articles",
+    pk: 557,
+    fields: {
+      title: "What’s The Best Way to Learn Computer Science",
+      date_created: "2021-04-23",
+      medium_link:
+        "https://blog.shubhpatni.com/whats-the-best-way-to-learn-computer-science-de53224466bc",
+      image:
+        "/article_images/What’s The Best Way to Learn Computer Science.png",
+      tags: "Programming",
+    },
+  },
+  {
+    model: "main.articles",
+    pk: 567,
+    fields: {
+      title: "How To Make an IoT Device",
+      date_created: "2021-01-22",
+      medium_link:
+        "https://blog.shubhpatni.com/how-to-make-an-iot-device-845b8ba4ed60",
+      image: "/article_images/How To Make an IoT Device.png",
+      tags: "Programming",
+    },
+  },
+  {
+    model: "main.articles",
+    pk: 576,
+    fields: {
+      title: "How to Get an Arduino and Your Smartphone to Talk to Each Other",
+      date_created: "2020-11-02",
+      medium_link:
+        "https://blog.shubhpatni.com/how-to-get-arduino-and-smartphone-talk-to-each-other-9abaf39d2ff6",
+      image:
+        "/article_images/How to Get an Arduino and Your Smartphone to Talk to Each Other.png",
+      tags: "Programming",
+    },
+  },
+  {
+    model: "main.articles",
+    pk: 584,
+    fields: {
+      title: "Back to Basics With Pointers",
+      date_created: "2020-09-17",
+      medium_link:
+        "https://blog.shubhpatni.com/back-to-basics-with-pointers-58859c9c326b",
+      image: "/article_images/Back to Basics With Pointers.png",
+      tags: "Programming",
+    },
+  },
+  {
+    model: "main.articles",
+    pk: 585,
+    fields: {
+      title: "This Simple Code Can Save 50% off Your MacBook Space",
+      date_created: "2020-09-14",
+      medium_link:
+        "https://blog.shubhpatni.com/this-simple-code-can-save-50-of-your-macbook-space-763cdbc02415",
+      image: "/article_images/ThisSimpleCodeCanSave50offYourMacBookSpace.png",
+      tags: "Programming",
+    },
+  },
+  {
+    model: "main.articles",
+    pk: 605,
+    fields: {
+      title: "What Do Emotions Look Like? Let’s Ask The Computer",
+      date_created: "2020-06-18",
+      medium_link:
+        "https://blog.shubhpatni.com/what-do-emotions-look-like-lets-ask-the-computer-57242fef8b00",
+      image:
+        "/article_images/What Do Emotions Look Like Let’s Ask The Computer.png",
+      tags: "Programming",
+    },
+  },
+  {
+    model: "main.articles",
+    pk: 606,
+    fields: {
+      title: "This Simple Code Allows You To Use Face ID On Mac",
+      date_created: "2020-06-14",
+      medium_link:
+        "https://blog.shubhpatni.com/this-simple-code-allows-you-to-use-face-id-on-mac-29fc8334f080",
+      image:
+        "/article_images/This Simple Code Allows You To Use Face ID On Mac.png",
+      tags: "Programming",
+    },
+  },
+  {
+    model: "main.articles",
+    pk: 617,
+    fields: {
+      title: "Why Bittensor Will Win The Decentralised AI Race",
+      date_created: "2024-05-7",
+      medium_link:
+        "https://hfaresearch.substack.com/p/why-bittensor-will-win-the-decentralised",
+      image:
+        "article_images/why-bittensor-will-win-the-decentralised-ai-race.png",
+      tags: "Crypto",
+    },
+  },
+];
+export const archived = [
+  {
+    model: "main.articles",
     pk: 551,
     fields: {
       title: "How I Increased My Productivity Using Spotify",
@@ -25,8 +141,7 @@ export const articles = [
         "/article_images/How I Increased My Productivity Using Spotify.png",
       tags: "Productivity",
     },
-  },
-  {
+  },  {
     model: "main.articles",
     pk: 552,
     fields: {
@@ -49,8 +164,7 @@ export const articles = [
       image: "/article_images/We Finally Have a Decentralized Twitter.png",
       tags: "Crypto",
     },
-  },
-  {
+  },  {
     model: "main.articles",
     pk: 554,
     fields: {
@@ -87,21 +201,7 @@ export const articles = [
       image: "/article_images/Why You Need a ‘.ETH’ Domain Name.png",
       tags: "Crypto",
     },
-  },
-  {
-    model: "main.articles",
-    pk: 557,
-    fields: {
-      title: "What’s The Best Way to Learn Computer Science",
-      date_created: "2021-04-23",
-      medium_link:
-        "https://blog.shubhpatni.com/whats-the-best-way-to-learn-computer-science-de53224466bc",
-      image:
-        "/article_images/What’s The Best Way to Learn Computer Science.png",
-      tags: "Programming",
-    },
-  },
-  {
+  },  {
     model: "main.articles",
     pk: 558,
     fields: {
@@ -213,20 +313,7 @@ export const articles = [
       image: "/article_images/Why I am Betting on Cardano (ADA).png",
       tags: "Crypto",
     },
-  },
-  {
-    model: "main.articles",
-    pk: 567,
-    fields: {
-      title: "How To Make an IoT Device",
-      date_created: "2021-01-22",
-      medium_link:
-        "https://blog.shubhpatni.com/how-to-make-an-iot-device-845b8ba4ed60",
-      image: "/article_images/How To Make an IoT Device.png",
-      tags: "Programming",
-    },
-  },
-  {
+  },  {
     model: "main.articles",
     pk: 568,
     fields: {
@@ -327,21 +414,7 @@ export const articles = [
       image: "/article_images/5 Unpopular Ways of Making Money Online.png",
       tags: "Tech",
     },
-  },
-  {
-    model: "main.articles",
-    pk: 576,
-    fields: {
-      title: "How to Get an Arduino and Your Smartphone to Talk to Each Other",
-      date_created: "2020-11-02",
-      medium_link:
-        "https://blog.shubhpatni.com/how-to-get-arduino-and-smartphone-talk-to-each-other-9abaf39d2ff6",
-      image:
-        "/article_images/How to Get an Arduino and Your Smartphone to Talk to Each Other.png",
-      tags: "Programming",
-    },
-  },
-  {
+  },  {
     model: "main.articles",
     pk: 577,
     fields: {
@@ -425,32 +498,7 @@ export const articles = [
       image: "/article_images/Should You Invest in a Crypto Backed by Gold.png",
       tags: "Crypto",
     },
-  },
-  {
-    model: "main.articles",
-    pk: 584,
-    fields: {
-      title: "Back to Basics With Pointers",
-      date_created: "2020-09-17",
-      medium_link:
-        "https://blog.shubhpatni.com/back-to-basics-with-pointers-58859c9c326b",
-      image: "/article_images/Back to Basics With Pointers.png",
-      tags: "Programming",
-    },
-  },
-  {
-    model: "main.articles",
-    pk: 585,
-    fields: {
-      title: "This Simple Code Can Save 50% off Your MacBook Space",
-      date_created: "2020-09-14",
-      medium_link:
-        "https://blog.shubhpatni.com/this-simple-code-can-save-50-of-your-macbook-space-763cdbc02415",
-      image: "/article_images/ThisSimpleCodeCanSave50offYourMacBookSpace.png",
-      tags: "Programming",
-    },
-  },
-  {
+  },  {
     model: "main.articles",
     pk: 586,
     fields: {
@@ -638,8 +686,7 @@ export const articles = [
         "/article_images/Amazon’s New Service Can Create Apps Without Code.png",
       tags: "Tech",
     },
-  },
-  {
+  },  {
     model: "main.articles",
     pk: 601,
     fields: {
@@ -688,34 +735,7 @@ export const articles = [
       image: "article_images/What_Is_Most_Important.png",
       tags: "Productivity",
     },
-  },
-  {
-    model: "main.articles",
-    pk: 605,
-    fields: {
-      title: "What Do Emotions Look Like? Let’s Ask The Computer",
-      date_created: "2020-06-18",
-      medium_link:
-        "https://blog.shubhpatni.com/what-do-emotions-look-like-lets-ask-the-computer-57242fef8b00",
-      image:
-        "/article_images/What Do Emotions Look Like Let’s Ask The Computer.png",
-      tags: "Programming",
-    },
-  },
-  {
-    model: "main.articles",
-    pk: 606,
-    fields: {
-      title: "This Simple Code Allows You To Use Face ID On Mac",
-      date_created: "2020-06-14",
-      medium_link:
-        "https://blog.shubhpatni.com/this-simple-code-allows-you-to-use-face-id-on-mac-29fc8334f080",
-      image:
-        "/article_images/This Simple Code Allows You To Use Face ID On Mac.png",
-      tags: "Programming",
-    },
-  },
-  {
+  },  {
     model: "main.articles",
     pk: 607,
     fields: {
@@ -799,17 +819,4 @@ export const articles = [
       tags: "Crypto",
     },
   },
-  {
-    model: "main.articles",
-    pk: 617,
-    fields: {
-      title: "Why Bittensor Will Win The Decentralised AI Race",
-      date_created: "2024-05-7",
-      medium_link:
-        "https://hfaresearch.substack.com/p/why-bittensor-will-win-the-decentralised",
-      image:
-        "article_images/why-bittensor-will-win-the-decentralised-ai-race.png",
-      tags: "Crypto",
-    },
-  },
-];
+]
