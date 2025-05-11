@@ -19,6 +19,17 @@ const userData = {
       Implemented a dynamic, real-time custom preview feature, enabling users to review updates instantaneously and download their resumes in PDF format, enhancing the user experience and utility of the service.`,
     },
     {
+      title: "Best Ice Cream",
+      link: "https://besticecream-4bhk.vercel.app/",
+      imgUrl: "projects/resme.png",
+      videoLink: "",
+      description: `ResMe is designed to streamline and elevate your professional journey. It organizes your experiences, skills, and projects, while its intuitive Resume Builder takes care of optimal formatting, keywords, and more.
+      
+      Engineered a sophisticated resume builder platform leveraging Next.js and TypeScript, integrating Zod for validation, MongoDB for data storage, Next Auth for secure authentication, coupled with Server Actions and REST APIs for backend operations, and Zustand for state management.
+      
+      Implemented a dynamic, real-time custom preview feature, enabling users to review updates instantaneously and download their resumes in PDF format, enhancing the user experience and utility of the service.`,
+    },
+    {
       title: "Pendulum",
       link: "https://github.com/alexanderles/pendulum-superhack",
       imgUrl: "projects/pendulum.png",
