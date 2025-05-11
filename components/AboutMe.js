@@ -25,14 +25,14 @@ export default function AboutMe() {
           {/* Social Buttons */}
           <div className="inline-flex flex-col">
             <div className="mt-8 flex flex-col space-y-4">
-              <a
+              {/* <a
                 href={userData.everythingResume}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
               >
                 Everything Resume
-              </a>
+              </a> */}
               <a
                 href={userData.softwareDevResume}
                 target="_blank"
@@ -49,14 +49,14 @@ export default function AboutMe() {
               >
                 Full Stack Developer Resume
               </a>{" "}
-              <a
+              {/* <a
                 href={userData.web3DevResume}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
               >
                 Web3 Developer Resume
-              </a>{" "}
+              </a>{" "} */}
               <a
                 href={"mailto:" + userData.email}
                 target="__blank"
