@@ -237,7 +237,7 @@ const userData = {
     {
       title: "Freelance Technical Writer",
       company: "Freelance",
-      year: "2020-present",
+      year: "2020, 2021",
       companyLink: "https://medium.com/@shubhpatni",
       desc: `Authored over 100 articles with a combined total of over 200k views and 5x Top writer on Medium in Programming, Business, Innovation, Crypto, and Technology. 
       

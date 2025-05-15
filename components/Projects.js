@@ -156,21 +156,55 @@ const ProjectCard = ({
   onLeave,
 }) => {
   const [isPopupOpen, setPopupOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    onHover();
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    onLeave();
+  };
+
+  const isYouTubeVideo = videoLink && videoLink.includes('youtube.com');
 
   return (
     <div 
       className="w-full block cursor-pointer group relative"
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       onClick={() => window.open(link, '_blank')}
     >
       <div className="relative overflow-hidden border-[1px] border-black dark:border-white">
         <div className="h-72 object-cover">
-          <img
-            src={imgUrl}
-            alt="portfolio"
-            className="object-cover h-full w-full"
-          />
+          {isHovered && videoLink ? (
+            isYouTubeVideo ? (
+              <iframe
+                src={videoLink}
+                className="w-full h-full object-cover"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <video
+                src={videoLink}
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            )
+          ) : (
+            <img
+              src={imgUrl}
+              alt="portfolio"
+              className="object-cover h-full w-full"
+            />
+          )}
         </div>
         
         {/* Title Display */}
