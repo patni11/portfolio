@@ -60,7 +60,7 @@ export default function Writings() {
   };
 
   return (
-    <section className="bg-white dark:bg-gray-900 h-full py-8">
+    <section className="bg-white dark:bg-gray-900 h-full py-8 font-['Inter_var']">
       <div className="w-full md:w-[80%] mx-auto items-center justify-center flex">
         <div className="flex flex-col md:flex-row gap-8 w-[90%] md:w-3/4 items-start justify-center">
           {/* Filters Column */}
@@ -68,15 +68,15 @@ export default function Writings() {
             <div className="space-y-6">
               {/* Topic Filter */}
               <div>
-                <h3 className="text-sm mb-2 font-bold">Topic</h3>
+                <h3 className="text-sm md:text-xl mb-2 font-bold">Topic</h3>
                 <ul className="md:space-y-2 flex flex-row md:flex-col space-x-2 md:space-x-0 flex-wrap">
                   {tags.map((tag, idx) => (
                     <li key={idx}>
                       <button
                         onClick={() => handleFilter("topic", tag)}
-                        className={`w-content text-sm text-left transition-colors
+                        className={`w-content text-sm md:text-md text-left transition-colors
                           ${filter === tag
-                            ? "text-blue-500"
+                            ? "text-red-500"
                             : "dark:text-white text-black"}`}
                       >
                         {tag}
@@ -88,15 +88,15 @@ export default function Writings() {
 
               {/* Year Filter */}
               <div>
-                <h3 className="text-sm mb-2 font-bold">Year</h3>
+              <h3 className="text-sm md:text-xl mb-2 font-bold">Year</h3>
                 <ul className="md:space-y-2 flex flex-row md:flex-col space-x-2 md:space-x-0 flex-wrap">
                   {years.map((year, idx) => (
                     <li key={idx}>
                       <button
                         onClick={() => handleFilter("year", year)}
-                        className={`w-content text-sm text-left transition-colors
+                        className={`w-content text-sm text-left md:text-md transition-colors
                           ${yearFilter === year
-                            ? "text-blue-500"
+                            ? "text-red-500"
                             : "dark:text-white text-black"}`}
                       >
                         {year}
@@ -118,9 +118,9 @@ export default function Writings() {
                   <a
                     key={idx}
                     href={article.fields.medium_link}
-                    className="block hover:underline visited:text-purple-400 active:text-yellow-400"
+                    className="block hover:underline visited:text-gray-400"
                   >
-                    <h2 className="text-sm mb-4">{article.fields.title}</h2>
+                    <h2 className="text-sm mb-4 font-['EB_Garamond'] text-xl">{article.fields.title}</h2>
                   </a>
                 ))
               )}
@@ -133,7 +133,7 @@ export default function Writings() {
         <span className="mr-2">
           {showArchived ? "Back to good articles -" : "My shittier blogs -"}
         </span>
-        <button onClick={toggleArchived} className="text-blue-500 underline">
+        <button onClick={toggleArchived} className="text-red-500 underline">
           {showArchived ? "Not Archived" : "Archived"}
         </button>
       </div>

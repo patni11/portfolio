@@ -21,7 +21,7 @@ export default function Nav() {
           </h1>
         </a>
       </Link>
-      <button
+      {/* <button
         aria-label="Toggle Dark Mode"
         type="button"
         className="w-10 h-10 p-3 rounded focus:outline-none"
@@ -52,7 +52,7 @@ export default function Nav() {
             )}
           </svg>
         )}
-      </button>
+      </button> */}
     </div>
   );
 }
