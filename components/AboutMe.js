@@ -57,6 +57,13 @@ export default function AboutMe() {
               >
                 Web3 Developer Resume
               </a>{" "} */}
+                          <a
+                href={"/projects"}
+                rel="noopener noreferrer"
+                className="text-red-500 underline font-bold text-xs italic opacity-75"
+              >
+                Checkout my projects
+              </a>
               <a
                 href={"mailto:" + userData.email}
                 target="__blank"
@@ -73,10 +80,9 @@ export default function AboutMe() {
             {userData.about.description?.map((desc, idx) => (
               <p
                 key={idx}
-                className="text-xl text-gray-700 mb-4 dark:text-gray-300 "
-              >
-                {desc}
-              </p>
+                className="text-xl text-gray-700 mb-4 dark:text-gray-300"
+                dangerouslySetInnerHTML={{ __html: desc }}
+              />
             ))}
           </div>
         </div>
@@ -128,7 +134,7 @@ const Timeline = ({ userData }) => {
           </div>
         ))}
               <p className="text-gray-500 text-sm dark:text-gray-300 italics mt-12 w-full text-center">
-        will update the rest soon, I am too lazy
+        will update the rest soon
       </p>
       </div>
     </div>

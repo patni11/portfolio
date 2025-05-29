@@ -162,14 +162,16 @@ const userData = {
     }
   ],
   about: {
-    title: "Full Stack Developer and Technical Writer",
+    title: "Software Engineer / Writer / Guitarist / Gym Rat",
     description: [
-      `I am a student at Northeastern University majoring in Computer Science and Economics.`,
-      `My goal is to create positive incentive based systems, products that have a positive imapct overall. Ex nobody buys tesla coz it's green but because it's a cool car. Here incentive drives a positive action.`,
-      `I decided to focus more on crypto because it allowed me to monetize my skills easily. I want to make it available to everyone.`,
+      `I just graduated from Northeastern University in Honors Computer Science and Economics`,
+`I am co-founder of one of the biggest NFT collections and a trading platform currently in stealth (as a pseudo-anon, can share details privately) and founder of <a href="https://www.resme.xyz" target="_blank" style="color: #ef4444; opacity: 0.75;"> Resme </a>`,
+'I was 5x top writer on Medium, have won 5 web3 hackathons and my blogs/products have touched millions of users',
+      `My philosophy is - create positive externality based cool products. Ex nobody buys tesla coz it's green but because it's a cool car. Here selfish incentive drives a positive action.`,
+      ,
     ],
-    currentProject: "NEUGYM",
-    currentProjectUrl: "https://www.neugym.com/",
+    currentProject: "Trading Platform [Building pseudonomously]",
+    currentProjectUrl: "",
   },
   experience: [
     {
@@ -296,6 +298,18 @@ const userData = {
       date: "October 2015",
       description:
         "Bought Mac, after trying every possible way to run xcode on windows",
+      link: "",
+    },
+    {
+      date: "2016",
+      description:
+        "Built unit converter app",
+      link: "",
+    },
+    {
+      date: "2016",
+      description:
+        "Built my first game: Start Crash [500+ downloads]",
       link: "",
     },
   ],

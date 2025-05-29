@@ -23,7 +23,7 @@ export default function Hero() {
           text-2xl text-center mx-auto"
           style={{ marginLeft: "0px" }}
         >
-          <p>I am a Developer and Blogger.</p>
+          <p>I am a Engineer and Writer</p>
 
           <p>
             On this site, you can find my
