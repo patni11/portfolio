@@ -13,6 +13,7 @@ export default function Projects() {
       <div className="bg-[#F1F1F1] dark:bg-gray-900">
         <div className="max-w-6xl mx-auto py-20 pb-40">
           {/* Mobile view - single column */}
+          <h3 className="text-md mx-auto text-center mb-8 font-['EB_Garamond']">some projects may not work due to invalid API keys over time, please refer to the video demos </h3>
           <h3 className="text-2xl md:hidden mx-auto text-center font-bold mb-6 font-['EB_Garamond']">Projects</h3>
           <div className="md:hidden grid grid-cols-1 gap-4 mx-4">
             {userData.projects.map((proj, idx) => (
@@ -27,6 +28,8 @@ export default function Projects() {
               />
             ))}
           </div>
+
+          
           
           {/* Desktop view - two columns */}
           <div className="hidden md:flex gap-12">

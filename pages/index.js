@@ -10,8 +10,9 @@ export default function Home() {
       description="Shubh Patni's personal website"
     >
       <Hero />
-      <FavoriteWritings />
       <FavouriteProjects />
+      <FavoriteWritings />
+      
     </ContainerBlock>
   );
 }

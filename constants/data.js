@@ -166,7 +166,7 @@ const userData = {
     description: [
       `I just graduated from Northeastern University in Honors Computer Science and Economics`,
 `I am co-founder of one of the biggest NFT collections and a trading platform currently in stealth (as a pseudo-anon, can share details privately) and founder of <a href="https://www.resme.xyz" target="_blank" style="color: #ef4444; opacity: 0.75;"> Resme </a>`,
-'I was 5x top writer on Medium, have won 5 web3 hackathons and my blogs/products have touched millions of users',
+'I was 5x top writer on Medium, have won 5 web3 hackathons and my blogs/products have touched hundreds of thousands of users',
       `My philosophy is - create positive externality based cool products. Ex nobody buys tesla coz it's green but because it's a cool car. Here selfish incentive drives a positive action.`,
       ,
     ],

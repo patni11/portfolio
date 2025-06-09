@@ -14,116 +14,159 @@ export default function FavouriteProjects() {
   const [currentProj, setCurrentProj] = useState(0);
 
   return (
-    <div className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto">
-        <header className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 md:my-20 lg:my-0">
-          <h1 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20 md:my-0 dark:text-gray-500 text-center">
-            Projects
-          </h1>
+    <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            Fav <span className="text-red-500">Projects</span>
+          </h2>
+
           <Link href="/projects">
-            <a className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-arrow-up-right-square"
-                stroke="4"
-                strokeWidth="4"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
-                />
+            <a className="inline-flex items-center px-6 py-3 border-2 border-red-500 text-red-500 font-semibold rounded-lg hover:bg-red-500 hover:text-white transition-all duration-200">
+              <span>View All Projects</span>
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-              <p>View all</p>
             </a>
           </Link>
-        </header>
+        </div>
 
-        {/* Grid starts here */}
-        <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
-          {/* Single card */}
-          <div className="w-full block col-span-3 shadow-2xl ">
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* ResMe - Main project (spans 2 columns on lg) */}
+          <div className="lg:col-span-2">
             <div
-              className="relative overflow-hidden cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               onClick={() => {
                 setCurrentProj(0);
                 setPopupOpen(true);
               }}
             >
-              <img
-                src="projects/resme.png"
-                alt="ResMe"
-                className="transform hover:scale-125 transition duration-2000 ease-out"
-              />
-              <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                ResMe
-              </h1>
-              <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
-                01
-              </h1>
+              <div className="aspect-video relative">
+                <img
+                  src="projects/resme.png"
+                  alt="ResMe"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                
+                {/* Project Info Overlay */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-2">ResMe</h3>
+                      <p className="text-gray-200 text-sm line-clamp-2">
+                        AI-powered resume and cover letter builder
+                      </p>
+                    </div>
+                    <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Featured
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Single card */}
-          <div className="w-full block col-span-3 shadow-2xl sm:col-span-2">
+          {/* NEU Gym Trends */}
+          <div>
             <div
-              className="relative overflow-hidden cursor-pointer"
-              onClick={() => {
-                setCurrentProj(2);
-                setPopupOpen(true);
-              }}
-            >
-              {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
-              <img
-                src="projects/faceID2.png"
-                alt="Face ID For Mac"
-                className="transform hover:scale-125 transition duration-2000 ease-out"
-              />
-              <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Face ID For Mac
-              </h1>
-              <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
-                01
-              </h1>
-            </div>
-          </div>
-
-          {/* Single card */}
-          <div className="w-full block col-span-3 sm:col-span-1 object-cover">
-            <div
-              className="relative overflow-hidden shadow-2xl cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               onClick={() => {
                 setCurrentProj(1);
                 setPopupOpen(true);
               }}
             >
-              {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
-              <img
-                src="projects/neugym.png"
-                alt="NEU Gym Trends"
-                className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
-              />
-              <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                NEU Gym Trends
-              </h1>
-              <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
-                03
-              </h1>
+              <div className="aspect-square relative">
+                <img
+                  src="projects/neugym.png"
+                  alt="NEU Gym Trends"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="text-lg font-bold text-white mb-1">NEU Gym Trends</h3>
+                  <p className="text-gray-200 text-xs">Real-time gym insights</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Face ID For Mac */}
+          <div className="md:col-span-2 lg:col-span-1">
+            <div
+              className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              onClick={() => {
+                setCurrentProj(2);
+                setPopupOpen(true);
+              }}
+            >
+              <div className="aspect-square relative">
+                <img
+                  src="projects/faceID2.png"
+                  alt="Face ID For Mac"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="text-lg font-bold text-white mb-1">Face ID For Mac</h3>
+                  <p className="text-gray-200 text-xs">Facial recognition login</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Pendulum - Additional featured project */}
+          <div className="md:col-span-2">
+            <div
+              className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              onClick={() => {
+                // Find Pendulum project
+                const pendulumIndex = userData.projects.findIndex(proj => proj.title === "Pendulum");
+                if (pendulumIndex !== -1) {
+                  setCurrentProj(pendulumIndex);
+                  setPopupOpen(true);
+                }
+              }}
+            >
+              <div className="aspect-video relative">
+                <img
+                  src="projects/pendulum.png"
+                  alt="Pendulum"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-2">Pendulum</h3>
+                      <p className="text-gray-200 text-sm line-clamp-2">
+                        Web3 platform with Harberger Tax system for expert Q&A
+                      </p>
+                    </div>
+                    <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Web3
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <ProjectPopup
         isOpen={isPopupOpen}
         onClose={() => setPopupOpen(false)}
-        title={projectData[currentProj].title}
-        description={projectData[currentProj].description}
-        link={projectData[currentProj].link}
-        videoLink={projectData[currentProj].videoLink}
-      ></ProjectPopup>
-    </div>
+        title={projectData[currentProj]?.title || ""}
+        description={projectData[currentProj]?.description || ""}
+        link={projectData[currentProj]?.link || ""}
+        videoLink={projectData[currentProj]?.videoLink || ""}
+      />
+    </section>
   );
 }
