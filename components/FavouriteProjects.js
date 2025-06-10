@@ -5,13 +5,18 @@ import ProjectPopup from "./ProjectPopup";
 
 export default function FavouriteProjects() {
   const [isPopupOpen, setPopupOpen] = useState(false);
-  const FavProjects = ["ResMe", "Face ID For Mac", "NEU Gym Trends"];
+  const FavProjects = ["ResMe", "Face ID For Mac", "NEU Gym Trends", "Photoshop Lite"];
 
   const projectData = userData.projects.filter((proj) => {
     return FavProjects.includes(proj.title);
   });
 
   const [currentProj, setCurrentProj] = useState(0);
+
+  // Helper function to get project index by title
+  const getProjectIndex = (title) => {
+    return projectData.findIndex(proj => proj.title === title);
+  };
 
   return (
     <section className="bg-gray-50 dark:bg-gray-900 py-20">
@@ -39,13 +44,13 @@ export default function FavouriteProjects() {
             <div
               className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               onClick={() => {
-                setCurrentProj(0);
+                setCurrentProj(getProjectIndex("ResMe"));
                 setPopupOpen(true);
               }}
             >
               <div className="aspect-video relative">
                 <img
-                  src="projects/resme.png"
+                  src={projectData[getProjectIndex("ResMe")]?.imgUrl || "projects/resme.png"}
                   alt="ResMe"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -57,7 +62,7 @@ export default function FavouriteProjects() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">ResMe</h3>
                       <p className="text-gray-200 text-sm line-clamp-2">
-                        AI-powered resume and cover letter builder
+                        {projectData[getProjectIndex("ResMe")]?.description || "AI-powered resume and cover letter builder"}
                       </p>
                     </div>
                     <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -74,13 +79,13 @@ export default function FavouriteProjects() {
             <div
               className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               onClick={() => {
-                setCurrentProj(1);
+                setCurrentProj(getProjectIndex("NEU Gym Trends"));
                 setPopupOpen(true);
               }}
             >
               <div className="aspect-square relative">
                 <img
-                  src="projects/neugym.png"
+                  src={projectData[getProjectIndex("NEU Gym Trends")]?.imgUrl || "projects/neugym.png"}
                   alt="NEU Gym Trends"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -88,7 +93,9 @@ export default function FavouriteProjects() {
                 
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-lg font-bold text-white mb-1">NEU Gym Trends</h3>
-                  <p className="text-gray-200 text-xs">Real-time gym insights</p>
+                  <p className="text-gray-200 text-xs">
+                    {projectData[getProjectIndex("NEU Gym Trends")]?.description || "Real-time gym insights"}
+                  </p>
                 </div>
               </div>
             </div>
@@ -99,13 +106,13 @@ export default function FavouriteProjects() {
             <div
               className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               onClick={() => {
-                setCurrentProj(2);
+                setCurrentProj(getProjectIndex("Face ID For Mac"));
                 setPopupOpen(true);
               }}
             >
               <div className="aspect-square relative">
                 <img
-                  src="projects/faceID2.png"
+                  src={projectData[getProjectIndex("Face ID For Mac")]?.imgUrl || "projects/faceID.png"}
                   alt="Face ID For Mac"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -113,29 +120,27 @@ export default function FavouriteProjects() {
                 
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-lg font-bold text-white mb-1">Face ID For Mac</h3>
-                  <p className="text-gray-200 text-xs">Facial recognition login</p>
+                  <p className="text-gray-200 text-xs">
+                    {projectData[getProjectIndex("Face ID For Mac")]?.description || "Facial recognition login"}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Pendulum - Additional featured project */}
+          {/* Photoshop Lite - Additional featured project */}
           <div className="md:col-span-2">
             <div
               className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               onClick={() => {
-                // Find Pendulum project
-                const pendulumIndex = userData.projects.findIndex(proj => proj.title === "Pendulum");
-                if (pendulumIndex !== -1) {
-                  setCurrentProj(pendulumIndex);
-                  setPopupOpen(true);
-                }
+                setCurrentProj(getProjectIndex("Photoshop Lite"));
+                setPopupOpen(true);
               }}
             >
               <div className="aspect-video relative">
                 <img
-                  src="projects/pendulum.png"
-                  alt="Pendulum"
+                  src={projectData[getProjectIndex("Photoshop Lite")]?.imgUrl || "projects/imageProcessing.png"}
+                  alt="Photoshop Lite"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -143,13 +148,13 @@ export default function FavouriteProjects() {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">Pendulum</h3>
+                      <h3 className="text-2xl font-bold text-white mb-2">Photoshop Lite</h3>
                       <p className="text-gray-200 text-sm line-clamp-2">
-                        Web3 platform with Harberger Tax system for expert Q&A
+                        {projectData[getProjectIndex("Photoshop Lite")]?.description || "Lightweight Java Swing photo editing app"}
                       </p>
                     </div>
-                    <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Web3
+                    <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Java
                     </div>
                   </div>
                 </div>

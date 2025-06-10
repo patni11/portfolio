@@ -10,18 +10,18 @@ export default function FavoriteWritings() {
       description: "An in-depth analysis of Bittensor's potential to dominate the decentralized AI landscape"
     },
     {
-      title: "Avalanche: A Novel Solution To The Blockchain Trilema",
-      href: "https://static.phemex.com/s/home/student-foundation/Shubh.pdf",
-      image: "article_images/A-DETAILED-GUIDE-ON-AVALANCHE-NETWORK.png",
-      category: "Blockchain",
-      description: "Exploring how Avalanche addresses scalability, security, and decentralization challenges"
+      title: "Back to Basics With Pointers",
+      href: "https://blog.shubhpatni.com/back-to-basics-with-pointers-58859c9c326b",
+      image: "/article_images/Back to Basics With Pointers.png",
+      category: "Programming",
+      description: "Exploring how pointers work in C"
     },
     {
-      title: "Why You Need a .ETH Domain Name",
-      href: "https://blog.shubhpatni.com/why-you-need-a-eth-domain-name-b16762fd16b4",
-      image: "/article_images/Why You Need a '.ETH' Domain Name.png",
-      category: "Web3",
-      description: "Understanding the importance and benefits of ENS domains in the decentralized web"
+      title: "How to make decisions",
+      href:"https://blog.shubhpatni.com/how-to-make-decisions",
+      image: "/article_images/how_to_make_decisions.png",
+      category: "Philosophy",
+      description: "How to make decisions"
     }
   ];
 
@@ -116,26 +116,6 @@ export default function FavoriteWritings() {
                 </article>
               </a>
             ))}
-          </div>
-        </div>
-
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-red-500">5x</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Top Writer on Medium</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-red-500">200k+</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Total Views</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-red-500">100+</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Articles Published</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-red-500">5</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Featured Categories</div>
           </div>
         </div>
       </div>

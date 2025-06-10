@@ -13,7 +13,6 @@ const userData = {
       imgUrl: "projects/resme.png",
       videoLink: "",
       description: `ResMe is a resume and cover letter builder to help you best present yourself in a competitive job market. It uses AI to fastern up tedious tasks`,
-      
       techStack: ["Next.js", "TypeScript", "Zod", "MongoDB", "Next Auth", "OpenAI", "REST APIs", "Zustand", "Resend", "Tailwind"],
     },
     {
@@ -28,7 +27,7 @@ const userData = {
       title: "Pendulum",
       link: "https://github.com/alexanderles/pendulum-superhack",
       imgUrl: "projects/pendulum.png",
-      videoLink: "",
+      videoLink: "https://youtu.be/7WaZrgDp6rg",
       description: `I created a new ERC-721P standard to allow experts to issue "Pendulums" to their audience. Pendulum is a platform enabling direct Q&A with industry experts via exclusive NFTs. It uses a Harberger Tax system for dynamic pricing and fair compensation, ensuring exclusive access to expert insights.`,
       techStack: ["Solidity", "TypeScript", "wagmi", "viem", "ERC-721P", "UUPS", "Harberger Tax"],
     },
