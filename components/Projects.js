@@ -66,7 +66,7 @@ export default function Projects() {
                   </div>
                 ) : (
                   <p className="text-xl leading-relaxed font-['EB_Garamond'] font-normal">
-                    There's no clean arc to my work, no tidy narrative. I started with Swift, built iOS games, wandered into Unity, made YouTube videos, wrote articles on medium so I could make money. I fell into AI, then crypto, creating Pendulum—a wild experiment in applying the Harberger tax to digital ownership. Most of what I build never quite finishes. It's have had a bad habit of abandoning things.
+                    
                     <br></br>
                     <br></br>
                     That chaos is how I've learned so far. But now, I want to channel that restless energy into something deeper—something I can sit with, shape over years, and look back on not just with pride, but with the feeling that I left a dent. Not in the universe, maybe, but in myself.
