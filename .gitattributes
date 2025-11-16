@@ -1,0 +1,23 @@
+# Treat font files as binary to prevent corruption
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+
+# Treat image files as binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.svg binary
+
+# Treat 3D model files as binary
+*.glb binary
+*.gltf binary
+
+# Treat video files as binary
+*.mp4 binary
+*.webm binary
+*.ogg binary 

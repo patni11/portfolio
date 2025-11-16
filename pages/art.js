@@ -7,7 +7,7 @@ import * as THREE from 'three'
 import { Canvas, createPortal, useFrame, useThree } from '@react-three/fiber'
 import { useFBO, useGLTF, useScroll, Text, Image, Scroll, Preload, ScrollControls, MeshTransmissionMaterial } from '@react-three/drei'
 import { easing } from 'maath'
-
+import dynamic from "next/dynamic";
 function Lens({ children, damping = 0.2, ...props }) {
     const ref = useRef()
     const { nodes } = useGLTF('/lens-transformed.glb')
@@ -140,7 +140,7 @@ function Typography() {
   
   // Shared text properties
   const shared = { 
-    font: '/Inter-Regular.woff', 
+    font: '/fonts/Inter-Regular.woff', 
     letterSpacing: -0.1, 
     color: 'black',
     fontSize: 1.2,           // Customize size
@@ -226,10 +226,24 @@ function MobileView() {
   )
 }
 
-const ArtPage = () => {
+const ArtPageComponent = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  const [hasWebGL, setHasWebGL] = useState(true);
 
   useEffect(() => {
+    // Ensure we're on the client side
+    setIsClient(true);
+    
+    // Check WebGL support
+    try {
+      const canvas = document.createElement('canvas');
+      const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      setHasWebGL(!!gl);
+    } catch (e) {
+      setHasWebGL(false);
+    }
+
     const checkMobile = () => {
       const width = window.innerWidth;
       const userAgent = navigator.userAgent;
@@ -242,6 +256,46 @@ const ArtPage = () => {
     
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  // Show loading until client-side rendering is ready
+  if (!isClient) {
+    return (
+      <div style={{
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: '#d8d7d7'
+      }}>
+        Loading...
+      </div>
+    );
+  }
+
+  // Show WebGL not supported message
+  if (!hasWebGL) {
+    return (
+      <div style={{
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: '#d8d7d7',
+        padding: '20px',
+        textAlign: 'center'
+      }}>
+        <h2 style={{ fontSize: '24px', color: '#374151', marginBottom: '20px' }}>
+          WebGL Not Supported
+        </h2>
+        <p style={{ fontSize: '16px', color: '#6B7280' }}>
+          Your browser doesn't support WebGL. Please try a different browser or update your current one.
+        </p>
+      </div>
+    );
+  }
 
   // Show mobile view for mobile devices
   if (isMobile) {
@@ -283,5 +337,7 @@ const ArtPage = () => {
     </div>
   )
 }
+
+const ArtPage = dynamic(() => Promise.resolve(ArtPageComponent), { ssr: false });
 
 export default ArtPage;
