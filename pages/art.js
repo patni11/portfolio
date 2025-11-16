@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import { gsap } from "gsap";
 import * as THREE from 'three'
 import { Canvas, createPortal, useFrame, useThree } from '@react-three/fiber'
-import { useFBO, useGLTF, useScroll, Text, Image, Scroll, Preload, ScrollControls, MeshTransmissionMaterial } from '@react-three/drei'
+import { useFBO, useGLTF, useScroll, Text, Text3D, Image, Scroll, Preload, ScrollControls, MeshTransmissionMaterial } from '@react-three/drei'
 import { easing } from 'maath'
 import dynamic from "next/dynamic";
 function Lens({ children, damping = 0.2, ...props }) {
@@ -138,29 +138,38 @@ function Typography() {
   const state = useThree()
   const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12])
   
-  // Shared text properties
-  const shared = { 
-    font: '/fonts/Inter-Regular.woff', 
-    letterSpacing: -0.1, 
-    color: 'black',
-    fontSize: 1.2,           // Customize size
-    maxWidth: 200            // Customize width
-  }
+  // Use Three.js default font - no loading required
+  // const shared = { 
+  //   letterSpacing: -0.1, 
+  //   color: 'black',
+  //   fontSize: 1.2,
+  //   maxWidth: 200
+  // }
+
+
   
   return (
     <>
       {/* Page 1 text */}
-      <Text children="Art" anchorX="left" position={[-width / 2.5, -height / 10, 12]} {...shared} color={"white"}/>
+      {/* <Text children="Art" anchorX="left" position={[-width / 2.5, -height / 10, 12]} {...shared} color={"white"}/> */}
       
-      {/* Page 2 text
-      <Text children="Is" anchorX="left" position={[width, -height * 2, 10]} {...shared} />
-      
-      <Text children="Beautiful" anchorX="right" position={[width / 2.5, -height * 2, 12]} {...shared} />
+      <Text3D 
+        font="/fonts/Inter.json"
+        size={0.5}
+        height={0.1}
+        position={[0, -height / 10, 12]}
+        letterSpacing={-0.08}
+        color={"white"}
+      >
+        Art
+        <meshStandardMaterial color="white" />
+      </Text3D>
 
-     */}
-    </>
+        </>
   )
 }
+
+
 
 // Mobile detection component
 function MobileView() {
@@ -319,6 +328,7 @@ const ArtPageComponent = () => {
           <Navbar />
         </div>
       </div>
+      
       
       <Canvas camera={{ position: [0, 0, 20], fov: 15 }}>
         <ScrollControls damping={0.2} pages={3} distance={0.5}>

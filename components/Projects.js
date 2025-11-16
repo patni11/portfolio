@@ -7,6 +7,10 @@ export default function Projects() {
   const [showUnfinished, setShowUnfinished] = useState(false);
   const [hoveredProject, setHoveredProject] = useState(null);
 
+  const clearHoveredProject = () => {
+    setHoveredProject(null);
+  };
+
   return (
     <section className="bg-white dark:bg-gray-800">
       {/* Grid starts here */}
@@ -63,16 +67,22 @@ export default function Projects() {
                         Watch Demo →
                       </a>
                     )}
+                    <button 
+                      onClick={clearHoveredProject}
+                      className="text-xs text-gray-500 hover:text-gray-700 mt-4 block underline"
+                    >
+                      ← Back to overview
+                    </button>
                   </div>
                 ) : (
                   <p className="text-xl leading-relaxed font-['EB_Garamond'] font-normal">
-                    
+                    I've dabbled with many things over time. Started with IOS dev, then game dev then AI and Blockchain.  
                     <br></br>
                     <br></br>
-                    That chaos is how I've learned so far. But now, I want to channel that restless energy into something deeper—something I can sit with, shape over years, and look back on not just with pride, but with the feeling that I left a dent. Not in the universe, maybe, but in myself.
+                    I am always driven by curiosity and a desire to learn.
                     <br></br>
                     <br></br>
-                    I hope these wandering nights will finally take me to new shore soon
+                  Right now I am looking to work on something I could be proud of for next 5 years.
                   </p>
                 )}
 
@@ -168,7 +178,6 @@ const ProjectCard = ({
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    onLeave();
   };
 
   const isYouTubeVideo = videoLink && videoLink.includes('youtube.com');

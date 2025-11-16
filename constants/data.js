@@ -11,7 +11,7 @@ const userData = {
       title: "ResMe",
       link: "https://www.resme.xyz/",
       imgUrl: "projects/resme.png",
-      videoLink: "",
+      videoLink: "https://www.youtube.com/embed/cDXK8N-b610?si=wvXK_tgb5BULyXqk",
       description: `ResMe is a resume and cover letter builder to help you best present yourself in a competitive job market. It uses AI to fastern up tedious tasks`,
       techStack: ["Next.js", "TypeScript", "Zod", "MongoDB", "Next Auth", "OpenAI", "REST APIs", "Zustand", "Resend", "Tailwind"],
     },
@@ -163,7 +163,7 @@ const userData = {
   about: {
     title: "Software Engineer / Writer / Guitarist / Gym Rat",
     description: [
-      `I just graduated from Northeastern University in Honors Computer Science and Economics`,
+      `I'm currently working at Wispr AI as a Software Engineer`,
 `I am co-founder of one of the biggest NFT collections and a trading platform currently in stealth (as a pseudo-anon, can share details privately) and founder of <a href="https://www.resme.xyz" target="_blank" style="color: #ef4444; opacity: 0.75;"> Resme </a>`,
 'I was 5x top writer on Medium, have won 5 web3 hackathons and my blogs/products have touched hundreds of thousands of users',
       `My philosophy is - create positive externality based cool products. Ex nobody buys tesla coz it's green but because it's a cool car. Here selfish incentive drives a positive action.`,
@@ -174,14 +174,30 @@ const userData = {
   },
   experience: [
     {
+      title: "Software Engineer",
+      company: "Wispr AI",
+      year: "2025",
+      companyLink: "https://wisprflow.ai/",
+      desc: `
+      Currently part of Wispr AI's early engineering team, helping shape the core product experience from prototype to production. I move fast across the stack to get new interaction ideas in front of users and tighten the build-measure-learn loop with design, product, and leadership.
+      `,
+    },
+    {
       title: "Full Stack Software Engineer (Co-Op)",
       company: "Hometap",
       year: "2024",
       companyLink: "https://www.hometap.com/",
       desc: `
-      Working as a full stack developer in the team that developer internal tools for investment managers.
-
-      The tech stack includes React and Django
+      Built internal investment tooling alongside Hometap's investment managers. Owned React dashboards, Django APIs, and workflow automation that replaced spreadsheet-heavy processes, surfaced live portfolio data, and kept underwriting decisions auditable.
+      `,
+    },
+    {
+      title: "Founder",
+      company: "Resme",
+      year: "2023-2024",
+      companyLink: "https://www.resme.xyz/",
+      desc: `
+      Founded ResMe, an AI-assisted resume and cover letter builder. Shipped the full stack—editor, GPT-powered resume and cover letter builder, built complete stripe integration for billing and onboarding—so job seekers can go from blank page to polished resume and cover letter in seconds.  
       `,
     },
     {
@@ -190,20 +206,7 @@ const userData = {
       year: "2023",
       companyLink: "https://csl.chainhub.foundation/",
       desc: `
-      Handpicked among just 16 teams by Lightspeed and Polychain Capital to pitch to a discerning audience of 50 VCs
-
-      Orchestrated end-to-end development for Pendulum, encompassing smart contracts, frontend design, and contract integration.`,
-    },
-    {
-      title: "Product Manager Researcher",
-      company: "Giaaka",
-      year: "2023",
-      companyLink: "https://norswap.io/",
-      desc: `
-      Spearheaded the development of Norswap, the proprietary exchange platform for Nordek Chain
-      
-      Proficiently designed and implemented the Frontend, Backend, API endpoints, and seamlessly integrated Smart Contracts within
-      Norswap. Used Vercel, MongoDB, Typescript, Next Js and Solidity`,
+      Selected as one of 16 teams by Lightspeed and Polychain Capital to pitch in front of 50+ VCs. Built every layer of Pendulum—Solidity contracts, frontend, and integrations—delivering a Harberger-tax powered Q&A marketplace within a month before pausing the experiment.`,
     },
     {
       title: "Teaching Assistant",
@@ -211,9 +214,9 @@ const userData = {
       year: "2022",
       companyLink:
         "https://cssh.northeastern.edu/academics/undergraduate-teaching-assistantships/",
-      desc: `Assisted students with their assignments and projects. 
-      
-      Helped them understand the concepts of Discrete Structures and graded homeworks.`,
+      desc: `
+      Led office hours, reviews, and grading for Discrete Structures. Helped students untangle proofs, recursion, and combinatorics assignments while surfacing recurring pain points to faculty.
+      `,
     },
     {
       title: "Researcher",
@@ -231,18 +234,18 @@ const userData = {
       year: "2022",
       companyLink:
         "https://static.phemex.com/s/home/student-foundation/Shubh.pdf",
-      desc: `Crafted a comprehensive research paper delving into the intricacies of Avalanche network's tokenomics, fundamental aspects, and ecosystem, providing invaluable insights for informed investment decisions by Phemex exchange stakeholders.
-      
-      Conducted an in-depth assessment of the Song a Day DAO, evaluating the worth of its music NFT collection.`,
+      desc: `
+      Authored the Avalanche network research report for the Phemex Student Foundation Program, covering token design, ecosystem fundamentals, and growth catalysts. Also valued the Song a Day DAO collection by blending on-chain metrics with qualitative diligence.
+      `,
     },
     {
       title: "Freelance Technical Writer",
       company: "Freelance",
       year: "2020, 2021",
       companyLink: "https://medium.com/@shubhpatni",
-      desc: `Authored over 100 articles with a combined total of over 200k views and 5x Top writer on Medium in Programming, Business, Innovation, Crypto, and Technology. 
-      
-      Published over 60 youtube videos and 200 educational posts on Instagram.`,
+      desc: `
+      Published 100+ long-form articles (200k+ reads) and became a 5× Top Writer on Medium across Programming, Business, Innovation, Crypto, and Technology. Complemented the writing with 60+ YouTube videos and 200 educational Instagram posts.
+      `,
     },
     {
       title: "Head of Technology",
@@ -250,16 +253,14 @@ const userData = {
       year: "2018-2020",
       companyLink: "",
       desc: `
-      Orchestrated multiple fundraising events, booths, and volunteer initiatives dedicated to providing sustenance and support to visually impaired individuals residing in an orphanage.
-      
-      Launched a song to disseminate awareness about COVID-19, resulting in the mobilization of resources to provide nourishment for more than 1,000 impoverished families in India.`,
+      Led technology and logistics for Help Uddaan Foundation fundraising campaigns supporting visually impaired communities. Produced a COVID awareness song and volunteer drive that raised food supplies for 1,000+ families across India.`,
     },
     {
       title: "High School",
       company: "Jain International",
       year: "2020",
       companyLink: "https://www.jirs.ac.in/",
-      desc: "39 points in International Baccalaureate",
+      desc: "Graduated with 39 points in the International Baccalaureate at Jain International.",
     },
   ],
   timeline: [
